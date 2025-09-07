@@ -7,9 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])
-->resource('employee',EmployeeController::class)
-->names('employee');
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
+    ->resource('employee', EmployeeController::class)
+    ->names('employee');
+    
 ;
 
 
