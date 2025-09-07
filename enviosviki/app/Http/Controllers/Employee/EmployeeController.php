@@ -13,7 +13,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        $employee = Persona::all ();
+        return view('employee.index',compact('employee'));
     }
 
     /**
